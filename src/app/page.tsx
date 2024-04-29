@@ -151,7 +151,7 @@ export default function App() {
             <div className="flex">
               <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 <span className="font-semibold text-purple-600">
-                  We're in public beta
+                  We&apos;re in public beta
                 </span>
                 <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
                 <a href="#" className="flex items-center gap-x-1">
