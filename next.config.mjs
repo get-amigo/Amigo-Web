@@ -2,6 +2,6 @@
 const nextConfig = {
     output: "export",  
     reactStrictMode: true,
-    basePath: "/Amigo-Web",
+    basePath: "",
   };
 export default nextConfig;

@@ -56,9 +56,7 @@ const Hero = () => {
             A better way to split your money
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Esse id magna consectetur fugiat non dolor in ad laboris magna
-            laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam
-            voluptate id. In veniam incididunt ex veniam adipisicing sit.
+            We help you manage your expenses and split them.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
