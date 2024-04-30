@@ -26,7 +26,7 @@ const Nav = () => {
             <span className="sr-only">Get Amigo</span>
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
+              src="/amigo-logo.svg"
               alt=""
             />
           </Link>
