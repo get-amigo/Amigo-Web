@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { AppStoreLink } from "../appstore-link";
 
 const Hero = () => {
   return (
@@ -59,12 +60,7 @@ const Hero = () => {
             We help you manage your expenses and split them.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
-            >
-              Get started
-            </a>
+            <AppStoreLink />
             <a
               href="#"
               className="text-sm font-semibold leading-6 text-gray-900"
