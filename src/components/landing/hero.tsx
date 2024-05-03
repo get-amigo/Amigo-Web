@@ -61,8 +61,8 @@ const Hero = () => {
             We help you manage your expenses and split them.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <AppStoreLink />
-            <PlayStoreLink />
+            <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+            <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
             <a
               href="#"
               className="text-sm font-semibold leading-6 text-gray-900"
