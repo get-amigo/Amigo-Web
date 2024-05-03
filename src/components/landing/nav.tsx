@@ -5,12 +5,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+const navigation: any = [];
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,11 +19,7 @@ const Nav = () => {
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Get Amigo</span>
-            <img
-              className="h-8 w-auto"
-              src="/amigo-logo.svg"
-              alt=""
-            />
+            <img className="h-8 w-auto" src="/amigo-logo.svg" alt="" />
           </Link>
         </div>
         <div className="flex lg:hidden">
