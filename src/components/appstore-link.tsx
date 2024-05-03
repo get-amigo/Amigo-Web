@@ -3,12 +3,14 @@ import clsx from "clsx";
 
 export function AppStoreLink({
   color = "black",
+  link
 }: {
   color?: "black" | "white";
+  link?: string;
 }) {
   return (
     <Link
-      href="#"
+      href={link || "#"}
       aria-label="Download on the App Store"
       className={clsx(
         "rounded-lg transition-colors",
