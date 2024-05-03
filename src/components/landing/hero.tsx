@@ -3,6 +3,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -63,12 +64,12 @@ const Hero = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
             <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
-            <a
-              href="#"
+            <Link
+              href="https://github.com/get-amigo"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Learn more <span aria-hidden="true">&rarr;</span>
-            </a>
+              Github Repository
+            </Link>
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
