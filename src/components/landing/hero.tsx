@@ -2,6 +2,7 @@
 
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
+import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
@@ -61,6 +62,7 @@ const Hero = () => {
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <AppStoreLink />
+            <PlayStoreLink />
             <a
               href="#"
               className="text-sm font-semibold leading-6 text-gray-900"
