@@ -5,7 +5,24 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 
-// const navigation: any = [];
+const navigation = [
+  {
+    name: "Home",
+    href: "#",
+  },
+  {
+    name: "Features",
+    href: "#",
+  },
+  {
+    name: "About",
+    href: "#",
+  },
+  {
+    name: "Contact",
+    href: "#",
+  },
+];
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,22 +63,22 @@ const Nav = () => {
             <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        {/* <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm uppercase font-semibold leading-6 text-white"
             >
               {item.name}
             </a>
           ))}
-        </div> */}
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="uppercase font-semibold leading-6 text-white">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
-        </div> */}
+        </div>
       </nav>
       <aside
         className={`bg-gray-900 fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
@@ -94,11 +111,11 @@ const Nav = () => {
           </button>
         </div>
         <div className="h-[1px] w-full bg-gray-500 mt-4"></div>
-        <nav className="px-6">
-          {new Array(4).fill(0).map((_, i) => (
+        <nav className="px-6 uppercase">
+          {navigation.map((item, i) => (
             <Link
-              key={i}
-              href="/"
+              key={item.name}
+              href={item.href}
               className={`py-4 text-3xl block transition-transform duration-500 ease-in-out font-bold delay-${
                 i * 100
               } ${
@@ -107,7 +124,7 @@ const Nav = () => {
                   : "translate-x-full"
               }`}
             >
-              Link {i + 1}
+              {item.name}
             </Link>
           ))}
         </nav>
