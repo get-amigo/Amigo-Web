@@ -6,7 +6,7 @@ import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
-    <div className="relative isolate flex justify-center py-16">
+    <div className="relative isolate flex justify-center py-16 bg-gray-950">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-300 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -23,7 +23,7 @@ const Hero = () => {
             <path d="M100 200V.5M.5 .5H200" fill="none" />
           </pattern>
         </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-gray-100">
+        <svg x="50%" y={-1} className="overflow-visible fill-purple-950/40">
           <path
             d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
             strokeWidth={0}
@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row justify-between gap-10 lg:gap-0">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto self-center space-y-10">
           <div className="flex justify-center md:justify-start">
-            <div className="flex flex-col sm:flex-row items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 ">
+            <div className="flex flex-col sm:flex-row items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-white ring-1 ring-purple-900 hover:ring-purple-600/70 ">
               <span className="font-semibold text-purple-600">
                 We&apos;re in public beta
               </span>
@@ -55,10 +55,10 @@ const Hero = () => {
             </div>
           </div>
           <div className="">
-            <h1 className="text-center md:text-left max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            <h1 className="text-center md:text-left max-w-lg text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl lg:text-6xl">
               A better way to split your money
             </h1>
-            <p className="mt-6 text-center md:text-left text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-center md:text-left text-lg leading-8 text-zinc-200">
               We help you manage your expenses and split them.
             </p>
           </div>
