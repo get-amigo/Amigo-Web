@@ -24,7 +24,7 @@ const TextRevealEffect = ({
       if (y < 0) return;
       const scrolledPercentage = y / container.offsetHeight;
       const nWordsToReveal = Math.floor(
-        scrolledPercentage * wordsArray.length * 0.8
+        scrolledPercentage * wordsArray.length * 1.1
       );
 
       words.forEach((word, idx) => {

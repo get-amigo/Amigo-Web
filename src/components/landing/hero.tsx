@@ -1,12 +1,10 @@
-"use client";
-
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
-    <div className="relative isolate flex justify-center py-16 bg-gray-950">
+    <section className="relative isolate flex justify-center py-32">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-300 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -98,7 +96,7 @@ const Hero = () => {
           </svg>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
