@@ -57,7 +57,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-black font-bold sm:text-6xl">
+          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-white font-bold sm:text-6xl">
             A better way to split your money
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-100">
