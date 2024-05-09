@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 // const navigation: any = [];
 
@@ -19,7 +20,13 @@ const Nav = () => {
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Get Amigo</span>
-            <img className="h-8 w-auto" src="/amigo-logo.svg" alt="" />
+            <Image className="h-8 w-auto"
+             src="amigo-logo.svg" 
+             alt=""
+             width={35}
+             height={35}
+             priority={true}
+              />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -60,10 +67,13 @@ const Nav = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Get Amigo</span>
-              <img
+              <Image
                 className="h-8 w-auto"
-                src="/ami-logo.svg"
+                src="amigo-logo.svg"
                 alt=""
+                width={35}
+                height={35}
+                priority={true}
               />
             </a>
             <button
