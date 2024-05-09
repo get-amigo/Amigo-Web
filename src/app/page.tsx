@@ -7,6 +7,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackground";
 import { TypewriterEffectSmoothDemo } from "@/components/Typewritter";
 import { TextGenerateEffectDemo } from "@/components/TextGenerate";
+import { HeroScrollDemo } from "@/components/ContainerScroll";
 export default function App() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function App() {
       <AuroraBackgroundDemo/>
       <TypewriterEffectSmoothDemo/>
       <TextGenerateEffectDemo/>
+      <HeroScrollDemo/>
       <Hero/>
       <Footer />
     </>
