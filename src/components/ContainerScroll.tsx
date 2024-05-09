@@ -19,7 +19,7 @@ export function HeroScrollDemo() {
         }
       >
         <Image
-          src={`/amigo-logo.svg`}
+          src={`/widgets.png`}
           alt="hero"
           height={720}
           width={1400}
