@@ -1,6 +1,8 @@
 "use client";
 
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { AppStoreLink } from "../appstore-link";
+import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
@@ -56,23 +58,12 @@ const Hero = () => {
             A better way to split your money
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Esse id magna consectetur fugiat non dolor in ad laboris magna
-            laborum ea consequat. Nisi irure aliquip nisi adipisicing veniam
-            voluptate id. In veniam incididunt ex veniam adipisicing sit.
+            We help you manage your expenses and split them.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
-            >
-              Get started
-            </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Learn more <span aria-hidden="true">&rarr;</span>
-            </a>
+            <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+            <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
+            
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
