@@ -6,30 +6,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 // const navigation: any = [];
-const navigation = [
-  {
-    name: "Home",
-    href: "#",
-  },
-  {
-    name: "Features",
-    href: "#",
-  },
-  {
-    name: "About",
-    href: "#",
-  },
-  {
-    name: "Contact",
-    href: "#",
-  },
-];
+
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-black text-white h-30 flex flex-col ">
-      <nav
+      <div
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
@@ -69,7 +52,7 @@ const Nav = () => {
           </a>
         </div>
         </div>
-      </nav>
+      </div>
       <Dialog
         as="div"
         className="lg:hidden"
