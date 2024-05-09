@@ -6,7 +6,7 @@ import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
-    <div className="relative isolate pt-14">
+    <div className="relative isolate pt-14 ">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -40,27 +40,30 @@ const Hero = () => {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div className="flex">
             <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              <span className="font-semibold text-purple-600">
+              <span className="font-semibold text-purple-600 text-3xl">
                 We&apos;re in public beta
               </span>
               <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
               <a href="#" className="flex items-center gap-x-1">
                 <span className="absolute inset-0" aria-hidden="true" />
+                <div className="text-white text-xl ml-5">
                 Launch Announcement
+                </div>
+                
                 <ChevronRightIcon
-                  className="-mr-2 h-5 w-5 text-gray-400"
+                  className="-mr-2 h-5 w-5 text-gray-100"
                   aria-hidden="true"
                 />
               </a>
             </div>
           </div>
-          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-black font-bold sm:text-6xl">
             A better way to split your money
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-100">
             We help you manage your expenses and split them.
           </p>
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-10 flex justify-start items-center gap-x-6">
             <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
             <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
             

@@ -4,6 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const readexPro = Readex_Pro({ subsets: ["latin"] });
+// _app.js
+import 'tailwindcss/tailwind.css';
 
 export const metadata: Metadata = {
   title: "Create Next App",
