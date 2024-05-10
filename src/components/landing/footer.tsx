@@ -1,5 +1,4 @@
-
-const navigation = {
+export const navigation = {
   main: [
     { name: "About", href: "#" },
     { name: "Privacy", href: "#" },
@@ -34,20 +33,21 @@ const navigation = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-white">
+    <footer className="bg-white ">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12 pb-4"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.name} className="group pb-2">
               <a
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 {item.name}
               </a>
+              <div className="w-full h-[2px] scale-x-0 bg-gray-600 transition-all duration-200 origin-left group-hover:scale-x-100"></div>
             </div>
           ))}
         </nav>
@@ -56,7 +56,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-400 hover:text-gray-500 hover:scale-125 transition-all duration-300"
             >
               <div className="w-5 h-5">
                 <item.icon />

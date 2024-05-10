@@ -6,7 +6,7 @@ import { PlayStoreLink } from "../playstore-link";
 
 const Hero = () => {
   return (
-    <div className="relative isolate pt-14">
+    <main className="relative isolate pt-14">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -37,9 +37,9 @@ const Hero = () => {
         />
       </svg>
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto translate-x-[-100px] animate-come-right">
           <div className="flex">
-            <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative flex items-center gap-x-4 rounded-full overflow-hidden px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               <span className="font-semibold text-purple-600">
                 We&apos;re in public beta
               </span>
@@ -52,9 +52,12 @@ const Hero = () => {
                   aria-hidden="true"
                 />
               </a>
+
+              <div className="absolute top-0 left-[-40px] w-[40px] h-[1px] bg-gradient-announcement animate-to-right"></div>
+              <div className="absolute bottom-0 left-[-40px] w-[40px] h-[1px] bg-gradient-announcement animate-to-right"></div>
             </div>
           </div>
-          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-gradient-h1 bg-clip-text text-transparent">
             A better way to split your money
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -63,14 +66,14 @@ const Hero = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
             <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
-            
           </div>
         </div>
-        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+
+        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow translate-y-[100px] animate-come-up">
           <svg
             viewBox="0 0 366 729"
             role="img"
-            className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+            className="mx-auto w-[22.875rem] max-w-full transition-all duration-300 drop-shadow-xl hover:drop-shadow-2xl "
           >
             <title>App screenshot</title>
             <defs>
@@ -97,7 +100,7 @@ const Hero = () => {
           </svg>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

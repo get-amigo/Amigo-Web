@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 export function AppStoreLink({
   color = "black",
-  link
+  link,
 }: {
   color?: "black" | "white";
   link?: string;
@@ -13,10 +13,10 @@ export function AppStoreLink({
       href={link || "#"}
       aria-label="Download on the App Store"
       className={clsx(
-        "rounded-lg transition-colors",
+        "rounded-lg transition-all duration-300  hover:scale-[1.07]",
         color === "black"
-          ? "bg-black text-white hover:bg-gray-900" 
-          : "bg-white text-gray-900 hover:bg-gray-50",
+          ? "bg-black text-white hover:bg-gray-900 "
+          : "bg-white text-gray-900 hover:bg-gray-50 "
       )}
     >
       <svg viewBox="0 0 120 40" aria-hidden="true" className="h-10">
