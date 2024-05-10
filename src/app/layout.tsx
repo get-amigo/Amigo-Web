@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Readex_Pro } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const readexPro = Readex_Pro({ subsets: ["latin"] });
+// const readexPro = Readex_Pro({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(readexPro.className, "mocha")}>{children}</body>
+    
+      <body className={cn(outfit.className, "mocha")}>{children}</body>
     </html>
   );
 }

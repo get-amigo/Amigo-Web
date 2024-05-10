@@ -1,12 +1,52 @@
-"use client";
 
+"use client"
+import React, { useEffect } from "react";
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
+import { Stars } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber"; 
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
+import Lottie from "lottie-react";
+import animation from '../../../public/Animation - 1715172469577.json'
+
+const COLORS_TOP: string[] = ["#ff136d", "#1E67C6", "#CE84CF", "#DD335C"];
 
 const Hero = () => {
+  const color = useMotionValue<string>(COLORS_TOP[0]);
+
+  useEffect(() => {
+    animate(color, COLORS_TOP, {
+      ease: "easeInOut",
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, []);
+
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 0% 0%, #020617 30%, ${color})`;
+
   return (
-    <div className="relative isolate pt-14">
+    <div className="relative isolate ">
+      <div>
+
+      <motion.section
+        style={{
+          backgroundImage,
+        }}
+        className="absolute inset-0 overflow-hidden"
+        >
+        <Canvas>
+          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+        </Canvas>
+      </motion.section>
+        </div>
+
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -15,7 +55,7 @@ const Hero = () => {
           <pattern
             id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
             width={200}
-            height={200}
+            height={100}
             x="50%"
             y={-1}
             patternUnits="userSpaceOnUse"
@@ -31,15 +71,16 @@ const Hero = () => {
         </svg>
         <rect
           width="100%"
-          height="100%"
+          height="70%"
           strokeWidth={0}
           fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
         />
       </svg>
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-7xl px-6 py-20 sm:py-32 lg:flex lg:mt-20 lg:gap-x-10 lg:px-8 lg:py-10">
+               
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-          <div className="flex">
-            <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          <div className="flex text-center mt-32 ">
+            <div className="relative flex  gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               <span className="font-semibold text-purple-600">
                 We&apos;re in public beta
               </span>
@@ -54,19 +95,27 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <div className="absolute">
+
+          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight   text-white sm:text-6xl text-center">
             A better way to split your money
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          
+          <p className="mt-6 text-lg leading-8 text-white border border-white p-3 text-center rounded-md ">
             We help you manage your expenses and split them.
           </p>
-          <div className="mt-10 flex items-center gap-x-6">
+          </div>
+          {/* <div className=" flex  gap-x-6 absolute">
             <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
             <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
-            
-          </div>
+          </div> */}
+                <div className="flex justify-center gap-x-6 absolute bottom-56 left-48  transform -translate-x-1/4">
+                  <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+                  <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
+                </div>
+
         </div>
-        <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+        <div className=" relative mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           <svg
             viewBox="0 0 366 729"
             role="img"
