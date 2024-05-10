@@ -3,6 +3,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -92,7 +93,12 @@ const Hero = () => {
               transform="translate(24 24)"
               clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
             >
-              <img src="/images/mobile-app-screenshot.png" alt="" />
+              <Image
+              src="/images/mobile-app-screenshot.png"
+               alt=""
+               layout="fill"
+               sizes="(max-width: 768px) 100vw, 50vw"
+/>
             </foreignObject>
           </svg>
         </div>

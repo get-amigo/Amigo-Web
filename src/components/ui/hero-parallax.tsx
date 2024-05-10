@@ -111,7 +111,7 @@ export const Header = () => {
        Introducing Amigo, your ultimate financial companion revolutionizing the way you manage money. 
        With Amigo, budgeting becomes a breeze as it effortlessly organizes your expenses and simplifies
         cost-splitting with friends and roommates. Say goodbye to financial stress and hello to a smarter,
-         more intuitive approach to money management. Seamlessly navigate your financial landscape with Amigo's intuitive features, 
+         more intuitive approach to money management. Seamlessly navigate your financial landscape with Amigo&apos;s intuitive features, 
          empowering you to achieve your financial goals with confidence. Join the Amigo community today and 
        experience a better way to split your money.
       </p>

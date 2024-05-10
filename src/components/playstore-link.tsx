@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function PlayStoreLink({
@@ -8,9 +9,11 @@ export function PlayStoreLink({
   return (
     <Link href={link || "#"} 
     aria-label="Download on the App Store">
-      <img
+      <Image
         src="/images/playstore-badge.png"
         alt="Download on the Play Store"
+        width={50}
+        height={50}
         className="block w-40"
       />
     </Link>
