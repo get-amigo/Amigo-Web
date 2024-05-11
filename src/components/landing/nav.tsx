@@ -3,13 +3,24 @@
 import { useState, useTransition } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from "next/image";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  {
+    name: "Home",
+    href: "#",
+  },
+  {
+    name: "Features",
+    href: "#",
+  },
+  {
+    name: "About",
+    href: "#",
+  },
+  {
+    name: "Contact",
+    href: "#",
+  },
 ];
 
 const Nav = () => {
@@ -32,11 +43,11 @@ const Nav = () => {
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Get Amigo</span>
 
-            <Image
+            <img
               className="h-8 w-auto"
               width={8}
               height={8}
-              src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
+              src="/amigo-logo.svg"
               alt="amigo logo"
             />
           </Link>
@@ -57,31 +68,34 @@ const Nav = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm uppercase font-semibold leading-6 text-white"
+              className="text-sm uppercase font-semibold leading-6 text-white hover:text-purple-600 focus-visible:text-purple-600"
             >
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="uppercase font-semibold leading-6 text-white">
+          <a
+            href="#"
+            className="uppercase font-semibold leading-6 text-white hover:text-purple-600 focus-visible:text-purple-600"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
       <aside
-        className={`bg-gray-900 fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
+        className={`lg:hidden bg-gray-900 fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
           mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full"
         }`}
       >
         {/* <div className="fixed z-40 inset-0 h-screen w-screen bg-gray-900/40"></div> */}
         <div className="mb-4 px-6 pt-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image
+            <img
               className="h-8 w-auto"
               width={8}
               height={8}
-              src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
+              src="/amigo-logo.svg"
               alt=""
             />
             <span className="font-bold text-xl">Amigo</span>
@@ -105,7 +119,7 @@ const Nav = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={`py-4  block hover:text-purple-500 focus-visible:text-purple-500 transition-transform duration-500 ease-in-out delay-${
+              className={`py-4  block hover:text-purple-600 focus-visible:text-purple-600 transition-transform duration-500 ease-in-out delay-${
                 i * 100
               } ${
                 !isPending && mobileMenuOpen
@@ -118,7 +132,7 @@ const Nav = () => {
           ))}
           <Link
             href="#"
-            className={`mt-[85%] py-4 block hover:text-purple-500 focus-visible:text-purple-500 transition-transform duration-500 ease-in-out delay-${
+            className={`mt-[85%] py-4 block hover:text-purple-600 focus-visible:text-purple-600 transition-transform duration-500 ease-in-out delay-${
               navigation.length * 100
             } ${
               !isPending && mobileMenuOpen
