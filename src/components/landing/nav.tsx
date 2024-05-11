@@ -7,6 +7,25 @@ import Link from "next/link";
 
 // const navigation: any = [];
 
+const navigation = [
+  {
+    name: "Home",
+    href: "#",
+  },
+  {
+    name: "Features",
+    href: "#",
+  },
+  {
+    name: "About",
+    href: "#",
+  },
+  {
+    name: "Contact",
+    href: "#",
+  },
+];
+
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
