@@ -63,7 +63,7 @@ const Nav = () => {
             <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        {/* <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -81,7 +81,7 @@ const Nav = () => {
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
-        </div>
+        </div> */}
       </nav>
       <aside
         className={`lg:hidden bg-gray-900 fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
