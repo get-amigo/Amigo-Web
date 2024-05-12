@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
           <div className="absolute">
 
-          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight   text-white sm:text-6xl text-center">
+          <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight   text-white sm:text-6xl ">
             A better way to split your money
           </h1>
           
@@ -109,8 +109,8 @@ const Hero = () => {
             <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
             <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
           </div> */}
-                <div className="flex justify-center gap-x-6 absolute bottom-56 left-48  transform -translate-x-1/4">
-                  <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+                <div className="flex justify-center gap-x-6 absolute bottom-64  left-48  transform -translate-x-1/4">
+                  <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159"  />
                   <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
                 </div>
 

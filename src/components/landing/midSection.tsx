@@ -11,7 +11,7 @@ import paymentAnimation from "../../../public/Animation - 1715251969845.json";
 
 const MidSection = () => {
   return (
-    <div className="flex flex-col justify-between items-center mt-10 mx-4 p-6 bg-gray-900 " style={{ wordSpacing: '0.5em' }}>
+    <div className="flex flex-col justify-between items-center mt-10  p-6 bg-gray-900 " style={{ wordSpacing: '0.5em' }}>
 
       <h1 className="text-white text-4xl mb-10 border  border-green-400 px-5 py-3 ">Payment Modes</h1>
       <div className="gap-10 p-4">
