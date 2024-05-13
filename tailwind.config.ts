@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: ["delay-100", "delay-200", "delay-300", "delay-400"],
   theme: {
     extend: {
       backgroundImage: {
