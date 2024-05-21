@@ -1,9 +1,9 @@
 
 const navigation = {
   main: [
-    { name: "About", href: "/pages/about" },
-    { name: "Privacy", href: "/pages/privacy" },
-    { name: "Terms", href: "/pages/terms" },
+    { name: "About", href: "/about" },
+    { name: "Privacy", href: "/privacy" },
+    { name: "Terms", href: "/terms" },
   ],
   social: [
     {
