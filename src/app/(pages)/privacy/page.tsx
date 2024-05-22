@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../../../components/landing/nav';
 import Footer from '../../../components/landing/footer';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -17,17 +18,15 @@ const privacy = (props: Props) => {
                     <p className="mb-2 text-gray-300">Effective Date: 10 April 2024</p>
 
                     <p className="mb-4 text-gray-300 ">
-                        <span className='text-2xl text-blue-100 mr-5'>
+  <span className='text-2xl text-blue-100 mr-5'>
+    Welcome to Amigo 
+  </span>
+  (&quot;Amigo&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this privacy policy carefully. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.
+</p>
 
-                        Welcome to Amigo 
-                        </span>
-                        
-                        ("Amigo", "we", "us", or "our"). Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this privacy policy carefully. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.
-                    </p>
-
-                    <p className="mb-4 text-gray-300">
-                        We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Effective Date" of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
-                    </p>
+<p className="mb-4 text-gray-300">
+  We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the &quot;Effective Date&quot; of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
+</p>
 
                     <p className="mb-4 text-gray-300">
                         You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted.
@@ -53,12 +52,16 @@ const privacy = (props: Props) => {
                 </div>
                 <div>
                     <div className="relative mt-40">
-                        <img
+                        <Image
+                         width={500}
+                         height={500}
                             src="/images/privacy1.jpeg"
                             alt="About Us"
                             className="w-full md:w-1/2 mt-8 md:mt-0"
                         />
-                        <img
+                        <Image
+                         width={500}
+                         height={500}
                             src="/images/privacy2.jpeg"
                             alt="About Us"
                             className="w-full md:w-1/2 absolute top-10 right-20 transform translate-x-1/2 -translate-y-1/2"
