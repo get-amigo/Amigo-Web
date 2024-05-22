@@ -3,6 +3,7 @@
 import Nav from "../../../components/landing/nav"
 import Footer from "../../../components/landing/footer"
 import React from 'react'
+import Image from "next/image"
 
 
 
@@ -22,17 +23,21 @@ const about = (props: Props) => {
             <div className="w-full md:w-1/2">
               <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-white">
-                Our mission is to help people connect with their friends and family in a more meaningful way. We believe that money should never be a barrier to spending time with the people you love. That's why we created Amigo - a platform that makes it easy to share expenses, make payments, and stay connected with friends.
-              </p>
+  Our mission is to help people connect with their friends and family in a more meaningful way. We believe that money should never be a barrier to spending time with the people you love. That&apos;s why we created Amigo - a platform that makes it easy to share expenses, make payments, and stay connected with friends.
+</p>
             </div>
 
             <div className="relative w-1/2 mt-20">
-              <img
+              <Image
+              width={500}
+              height={500}
                 src="/images/about.jpeg"
                 alt="About Us"
                 className="w-full md:w-1/2 mt-8 md:mt-20"
               />
-              <img
+              <Image
+               width={500}
+               height={500}
                 src="/images/aboutsus2.jpeg"
                 alt="About Us"
                 className="w-full md:w-1/2 absolute top-20 right-40 transform translate-x-1/2 -translate-y-1/2"

@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -36,22 +37,6 @@ const Hero = () => {
       </svg>
       <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row justify-between gap-10 lg:gap-0">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto self-center space-y-10">
-          <div className="flex justify-center md:justify-start">
-            <div className="flex flex-col sm:flex-row items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-white ring-1 ring-purple-900 hover:ring-purple-600/70 ">
-              <span className="font-semibold text-purple-600">
-                We&apos;re in public beta
-              </span>
-              <hr className="w-full sm:w-px h-px sm:h-full border-t-0 bg-gray-400" />
-              <a href="#" className="flex items-center gap-x-1">
-                <span className="" aria-hidden="true" />
-                Launch Announcement
-                <ChevronRightIcon
-                  className="-mr-2 h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              </a>
-            </div>
-          </div>
           <div className="">
             <h1 className="text-center md:text-left text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl lg:text-6xl">
               A better way to split your money
@@ -68,7 +53,7 @@ const Hero = () => {
         <div className="px-8 w-full min-w-[14.875em] max-h-[570px]">
           <svg
             viewBox="0 0 366 729"
-            role="img"
+            role="Image"
             className="mx-auto w-[22.875rem] max-w-full h-full drop-shadow-xl"
           >
             <title>App screenshot</title>
@@ -91,7 +76,10 @@ const Hero = () => {
               transform="translate(24 24)"
               clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
             >
-              <img src="/images/mobile-app-screenshot.png" alt="" />
+              <Image
+               width={500}
+               height={500}
+              src="/images/mobile-app-screenshot.png" alt="" />
             </foreignObject>
           </svg>
         </div>
