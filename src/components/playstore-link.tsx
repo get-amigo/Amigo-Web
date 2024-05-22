@@ -10,6 +10,8 @@ export function PlayStoreLink({
     <Link href={link || "#"} 
     aria-label="Download on the App Store">
       <Image
+       width={100}
+       height={100}
         src="/images/playstore-badge.png"
         alt="Download on the Play Store"
         className="block w-40"

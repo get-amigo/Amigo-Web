@@ -92,7 +92,10 @@ const Hero = () => {
               transform="translate(24 24)"
               clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
             >
-              <Image src="/images/mobile-app-screenshot.png" alt="" />
+              <Image
+               width={500}
+               height={500}
+              src="/images/mobile-app-screenshot.png" alt="" />
             </foreignObject>
           </svg>
         </div>

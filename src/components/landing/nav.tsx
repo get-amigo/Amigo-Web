@@ -45,6 +45,7 @@ const Nav = () => {
             <span className="sr-only">Get Amigo</span>
 
             <Image
+
               className="h-8 w-auto"
               width={8}
               height={8}

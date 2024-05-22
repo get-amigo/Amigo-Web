@@ -53,11 +53,15 @@ const privacy = (props: Props) => {
                 <div>
                     <div className="relative mt-40">
                         <Image
+                         width={500}
+                         height={500}
                             src="/images/privacy1.jpeg"
                             alt="About Us"
                             className="w-full md:w-1/2 mt-8 md:mt-0"
                         />
                         <Image
+                         width={500}
+                         height={500}
                             src="/images/privacy2.jpeg"
                             alt="About Us"
                             className="w-full md:w-1/2 absolute top-10 right-20 transform translate-x-1/2 -translate-y-1/2"

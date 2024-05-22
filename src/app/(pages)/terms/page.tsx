@@ -62,11 +62,15 @@ const terms = (props: Props) => {
         </div>
         <div className="relative mt-40 w-full">
           <Image
+           width={500}
+           height={500}
             src="/images/terms.jpeg"
             alt="About Us"
             className="w-full md:w-1/2 mt-20 md:mt-32"
           />
           <Image
+           width={500}
+           height={500}
             src="/images/terms2.jpeg"
             alt="About Us"
             className="w-full md:w-1/2 absolute top-20 right-28 transform translate-x-1/2 -translate-y-1/2"
