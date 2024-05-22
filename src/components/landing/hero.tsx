@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { AppStoreLink } from "../appstore-link";
 import { PlayStoreLink } from "../playstore-link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -68,7 +69,7 @@ const Hero = () => {
         <div className="px-8 w-full min-w-[14.875em] max-h-[570px]">
           <svg
             viewBox="0 0 366 729"
-            role="img"
+            role="Image"
             className="mx-auto w-[22.875rem] max-w-full h-full drop-shadow-xl"
           >
             <title>App screenshot</title>
@@ -91,7 +92,7 @@ const Hero = () => {
               transform="translate(24 24)"
               clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
             >
-              <img src="/images/mobile-app-screenshot.png" alt="" />
+              <Image src="/images/mobile-app-screenshot.png" alt="" />
             </foreignObject>
           </svg>
         </div>

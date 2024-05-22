@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   {
@@ -43,7 +44,7 @@ const Nav = () => {
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Get Amigo</span>
 
-            <img
+            <Image
               className="h-8 w-auto"
               width={8}
               height={8}
@@ -91,7 +92,7 @@ const Nav = () => {
         {/* <div className="fixed z-40 inset-0 h-screen w-screen bg-gray-900/40"></div> */}
         <div className="mb-4 px-6 pt-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
+            <Image
               className="h-8 w-auto"
               width={8}
               height={8}
