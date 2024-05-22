@@ -1,9 +1,9 @@
 
 const navigation = {
   main: [
-    { name: "About", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Privacy", href: "/privacy" },
+    { name: "Terms", href: "/terms" },
   ],
   social: [
     {
@@ -34,8 +34,8 @@ const navigation = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <footer>
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8 bottom-0">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
@@ -44,7 +44,7 @@ export default function Footer() {
             <div key={item.name} className="pb-6">
               <a
                 href={item.href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-600 hover:text-gray-300"
               >
                 {item.name}
               </a>
@@ -56,7 +56,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-400 hover:text-gray-100"
             >
               <div className="w-5 h-5">
                 <item.icon />
