@@ -37,21 +37,20 @@ const Nav = () => {
   return (
     <header className="absolute shadow-2xl inset-x-0 top-0 z-50">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8 bg-gray-900/80"
+        className="flex items-center justify-between p-6 lg:px-8" // o bg-gray-900/80
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="#" className="-m-1.5 p-1.5 flex items-center">
             <span className="sr-only">Get Amigo</span>
-
             <Image
-
-              className="h-8 w-auto"
-              width={8}
-              height={8}
+              className="h-12 w-auto"
+              width={12}
+              height={12}
               src="/amigo-logo.svg"
               alt="amigo logo"
             />
+            <span className="text-white font-bold ml-2 text-xl font-lalezar">Amigo </span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -86,7 +85,7 @@ const Nav = () => {
         </div> */}
       </nav>
       <aside
-        className={`lg:hidden bg-gray-900 fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 rounded-s-xl text-white w-96 z-50 h-full transition-all duration-500 ease-in-out ${
           mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full"
         }`}
       >
@@ -151,3 +150,8 @@ const Nav = () => {
 };
 
 export default Nav;
+
+{/* <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-x-4">
+<AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+<PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
+</div> */}

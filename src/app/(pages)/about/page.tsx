@@ -23,8 +23,8 @@ const about = (props: Props) => {
             <div className="w-full md:w-1/2">
               <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-white">
-  Our mission is to help people connect with their friends and family in a more meaningful way. We believe that money should never be a barrier to spending time with the people you love. That&apos;s why we created Amigo - a platform that makes it easy to share expenses, make payments, and stay connected with friends.
-</p>
+                Our mission is to help people connect with their friends and family in a more meaningful way. We believe that money should never be a barrier to spending time with the people you love. That&apos;s why we created Amigo - a platform that makes it easy to share expenses, make payments, and stay connected with friends.
+              </p>
             </div>
 
             <div className="relative w-1/2 mt-20">
