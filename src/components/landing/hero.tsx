@@ -1,8 +1,28 @@
+import { useState, useEffect } from 'react';
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-
 import Image from "next/image";
+import { AppStoreLink } from '../appstore-link';
+import { PlayStoreLink } from '../playstore-link';
 
 const Hero = () => {
+  const [imageSrc, setImageSrc] = useState("/images/mobile-keyframe.png");
+  const [isPhone, setIsPhone] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setImageSrc("/images/hero-phone.png");
+        setIsPhone(true);
+      } else {
+        setImageSrc("/images/mobile-keyframe.png");
+        setIsPhone(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="relative isolate flex justify-center py-32">
       <svg
@@ -43,8 +63,14 @@ const Hero = () => {
             <p className="mt-6 text-center md:text-left text-lg leading-8 text-zinc-200">
               We help you manage your expenses and split them.
             </p>
+            {isPhone && (
+              <div className="flex justify-center gap-4 mt-4">
+                <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+                <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
+              </div>
+            )}
             <div className="mt-6 flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4 p-4">
-              <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-white rounded-2xl p-1">
+              <div className="hidden md:flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-white rounded-2xl p-1">
                 <input
                   type="tel"
                   placeholder="Enter phone number"
@@ -57,19 +83,18 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
         </div>
-          <div className="px-8 w-full min-w-[14.875em] max-h-[570px] flex justify-center items-center">
-            <div style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}>
-              <Image
-                src="/images/mobile-keyframe.png"
-                alt="App screenshot"
-                width={800}
-                height={800}
-                className="mx-auto w-full h-auto drop-shadow-xl"
-              />
-            </div>
+        <div className="px-8 w-full min-w-[14.875em] max-h-[570px] flex justify-center items-center">
+          <div style={{ transform: imageSrc === "/images/hero-phone.png" ? 'scale(2)' : 'scale(1.5)', transformOrigin: 'center' }}>
+            <Image
+              src={imageSrc}
+              alt="App screenshot"
+              width={800}
+              height={800}
+              className="mx-auto w-full h-auto drop-shadow-xl"
+            />
           </div>
+        </div>
       </div>
     </section>
   );

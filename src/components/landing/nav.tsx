@@ -66,7 +66,7 @@ const Nav = () => {
             <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        <div className="store-links flex gap-2 items-center">
+        <div className="hidden lg:flex gap-2 items-center">
           <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
           <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
         </div>
