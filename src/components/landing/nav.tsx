@@ -4,6 +4,8 @@ import { useState, useTransition } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import { PlayStoreLink } from "../playstore-link";  
+import { AppStoreLink } from "../appstore-link";  
 
 const navigation = [
   {
@@ -63,6 +65,10 @@ const Nav = () => {
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
+        </div>
+        <div className="store-links flex gap-2 items-center">
+          <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
+          <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
         </div>
         {/* <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
