@@ -34,7 +34,11 @@ const Story: React.FC = () => {
             padding-right: 60px;
           }
           .about-us-section .paragraph-spacing {
-            margin-bottom: 1rem; /* Adds space between paragraphs */
+            margin-bottom: 1rem;
+          }
+          .our-story-section p {
+            padding-left: 350px;
+            padding-right: 350px;
           }
         }
       `}</style>
@@ -68,7 +72,7 @@ const Story: React.FC = () => {
         </div>
       </section>
 
-      <section className="text-center pb-15">
+      <section className="text-center pb-15 our-story-section">
         <h1 className="text-4xl font-bold text-center">Our Story</h1>
         <p className="text-lg leading-8 text-zinc-200 text-center">
           We were on a trip to Coorg and my roommate had to keep all the bills and had to write everything in order to split the bills and in order to tackle this problem we are introducing Amigo, your one-stop destination for all your bills.
