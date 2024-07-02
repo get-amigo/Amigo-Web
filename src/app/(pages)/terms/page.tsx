@@ -1,26 +1,23 @@
-
 import React from 'react';
 import Nav from '../../../components/landing/nav';
 import Footer from '../../../components/landing/footer';
 import Image from 'next/image';
 
-
 type Props = {};
 
 const terms = (props: Props) => {
   return (
-    <div className="flex-1 justify-between items-center bg-gray-950">
+    <div className="flex flex-col justify-between items-center bg-gray-950">
       <Nav />
-      <section className="terms text-white bg-gray-950 relative isolate flex justify-center py-32 px-10">
-        <div className='max-w-[60%] text-gray-500 text-sm '>
-          <h2 className="text-3xl font-bold text-center text-gray-100 mb-20 ml-60">
+      <section className="terms text-white bg-gray-950 relative isolate flex flex-col justify-center py-32 px-4">
+        <div className='max-w-[90%] text-gray-500 text-sm pl-12 pr-6'>
+          <h2 className="text-2xl font-bold text-center text-gray-100 mb-10">
             Terms and Conditions for Amigo
           </h2>
-          {/* <p className="mb-2">Last Updated: 10 April 2024</p> */}
           <p className="mb-4 text-gray-300">
-  Welcome to Amigo (&quot;Amigo&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). These terms and conditions outline the rules and regulations
-  for the use of Amigo&apos;s App, located at Amigo.com.
-</p>
+            Welcome to Amigo (&quot;Amigo&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). These terms and conditions outline the rules and regulations
+            for the use of Amigo&apos;s App, located at Amigo.com.
+          </p>
           <p className="mb-4 text-gray-300">
             By accessing this app we assume you accept these terms and conditions. Do not continue to use Amigo if you do
             not agree to take all of the terms and conditions stated on this page.
@@ -60,26 +57,10 @@ const terms = (props: Props) => {
             views and opinions of the person who post their views and opinions.
           </p>
         </div>
-        <div className="relative mt-40 w-full">
-          <Image
-           width={500}
-           height={500}
-            src="/images/terms.jpeg"
-            alt="About Us"
-            className="w-full md:w-1/2 mt-20 md:mt-32"
-          />
-          <Image
-           width={500}
-           height={500}
-            src="/images/terms2.jpeg"
-            alt="About Us"
-            className="w-full md:w-1/2 absolute top-20 right-28 transform translate-x-1/2 -translate-y-1/2"
-          />
-        </div>
       </section>
       <Footer />
     </div>
   );
-  };
+};
 
 export default terms;
