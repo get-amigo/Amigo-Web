@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 const Story: React.FC = () => {
   return (
-    <div className="bg-black text-white p-8 font-[Readex Pro]">
+    <div className="text-white p-8 font-[Readex Pro]" style={{ background: '#0F0E14' }}>
 
       <style jsx>{`
         @media (max-width: 600px) {
@@ -42,8 +42,8 @@ const Story: React.FC = () => {
           }
         }
       `}</style>
-      <section className="about-us-section mb-8">
-        <h1 className="text-4xl font-bold mb-4">About Us</h1>
+      <section className="about-us-section mb-8 pt-20">
+        <h1 className="text-4xl font-bold mb-6">About Us</h1>
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="md:w-1/2">
             <p className="text-lg leading-8 text-zinc-200 text-center md:text-left paragraph-spacing">
@@ -53,7 +53,7 @@ const Story: React.FC = () => {
               We at Amigo are committed towards revolutionizing the way friends and family manage their finances together. We aim to provide a seamless and user friendly platform for you for cost sharing, instant UPI payment and easy communication. Amigo is your one-stop destination for all your finance management and expense sharing.
             </p>
           </div>
-          <div className="flex md:w-1/2 justify-end mt-8 md:mt-0 image-container">
+          <div className="flex md:w-1/2 justify-end mt-9 md:mt-0 gap-3 image-container">
             <Image 
               src="/images/story1.png" 
               width={320} 
@@ -72,8 +72,8 @@ const Story: React.FC = () => {
         </div>
       </section>
 
-      <section className="text-center pb-15 our-story-section">
-        <h1 className="text-4xl font-bold text-center">Our Story</h1>
+      <section className="text-center pb-20 our-story-section">
+        <h1 className="text-4xl font-bold text-center mb-6">Our Story</h1>
         <p className="text-lg leading-8 text-zinc-200 text-center">
           We were on a trip to Coorg and my roommate had to keep all the bills and had to write everything in order to split the bills and in order to tackle this problem we are introducing Amigo, your one-stop destination for all your bills.
         </p>

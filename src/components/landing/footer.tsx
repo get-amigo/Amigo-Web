@@ -1,4 +1,3 @@
-
 const navigation = {
   main: [
     { name: "Home", href: "/" },
@@ -54,7 +53,7 @@ const navigation = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="text-sm">
+    <footer className="bg-[#0F0E14] text-sm">
       <div className="mx-auto max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8 bottom-0">
         <nav
           className="mb-6 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12"

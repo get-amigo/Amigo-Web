@@ -7,6 +7,7 @@ import Story from "@/components/landing/story";
 import TextRevealEffect from "@/components/landing/text-reveal-effect";
 import Usp from "@/components/landing/usp";
 import Tutorial from "@/components/landing/tutorial";
+import Download from "@/components/landing/download";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Usp />
       {/* <TextRevealEffect words="Unlock the power of seamless expense sharing, instant UPI payments, and effortless conversations with Amigo! Dive into a world where splitting bills, making payments, and staying connected with friends is as easy as a tap. Experience the joy of social transactions with Amigo - where finance meets friendship" /> */}
       <Tutorial />
+      <Download />
       <Footer />
     </div>
   );

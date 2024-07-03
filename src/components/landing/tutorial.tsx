@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import  { Autoplay }  from 'swiper/modules'; //Pagination , Navigation
+import { Autoplay } from 'swiper/modules'; // Pagination , Navigation
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -8,28 +8,60 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 const Tutorial: React.FC = () => {
+  const swiperRef = useRef(null);
+
+  const updateCustomSlideClasses = (swiper) => {
+    const slides = swiper.slides;
+    if (!slides) return;
+
+    // Remove all custom classes
+    slides.forEach(slide => {
+      slide.classList.remove('swiper-slide-prev-prev', 'swiper-slide-next-next');
+    });
+
+    const activeIndex = swiper.activeIndex;
+    const totalSlides = slides.length;
+
+    // Calculate and add classes for second previous and next slides
+    const prevPrevIndex = (activeIndex - 2 + totalSlides) % totalSlides;
+    const nextNextIndex = (activeIndex + 2) % totalSlides;
+
+    slides[prevPrevIndex].classList.add('swiper-slide-prev-prev');
+    slides[nextNextIndex].classList.add('swiper-slide-next-next');
+  };
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current.swiper;
+    if (swiperInstance) {
+      swiperInstance.on('slideChange', () => updateCustomSlideClasses(swiperInstance));
+    }
+  }, []);
+
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
-    <div className="bg-black text-white md:px-20 py-8 font-[Readex Pro]">
+    <div className="bg-[#0F0E14] text-white md:px-20 py-40 font-[Readex Pro]">
       <h2 className="font-bold text-4xl mb-12 text-center">How It Works</h2>
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-10">
         <Swiper
-          modules ={[Autoplay]} //Pagination , Navigation
+          ref={swiperRef}
+          modules={[Autoplay ]}
           spaceBetween={-200}
-          slidesPerView={3}
+          slidesPerView={isMobile ? 3 : 5}
           centeredSlides={true}
           loop={true}
-          // navigation
-          // pagination={{ clickable: true }}
           allowTouchMove={false}
           autoplay={{ delay: 3000 }}
-          className="custom-swiper w-1/2"
+          className="custom-swiper w-5/6 md:w-1/2"
+          onSlideChange={(swiper) => updateCustomSlideClasses(swiper)}
         >
           {slidesData.map((slide, index) => (
             <SwiperSlide className="swiper-slide-custom" key={index}>
               <div className="flex flex-col items-center text-center">
                 <Image src={slide.image} width={320} height={364} alt={`Step ${index + 1}`} />
-                <h2 className="slide-text text-3xl mt-6">Step {index + 1}</h2>
+                <p className="slide-text text-3xl mt-3">Step {index + 1}</p>
                 <p className="slide-text mt-2">{slide.title}</p>
+                <br />
                 <p className="slide-text">{slide.description}</p>
               </div>
             </SwiperSlide>
@@ -50,16 +82,18 @@ const Tutorial: React.FC = () => {
         .swiper-slide-custom.swiper-slide-active {
           opacity: 1;
           transform: scale(1);
+          z-index: 5;
+        }
+        .swiper-slide-custom.swiper-slide-prev,
+        .swiper-slide-custom.swiper-slide-next {
+          opacity: 1;
+          transform: scale(0.95);
           z-index: 3;
         }
-        .swiper-slide-custom.swiper-slide-prev {
-          opacity: 0.8;
-          transform: scale(0.95);
-          z-index: 2;
-        }
-        .swiper-slide-custom.swiper-slide-next {
-          opacity: 0.8;
-          transform: scale(0.95);
+        .swiper-slide-custom.swiper-slide-prev-prev,
+        .swiper-slide-custom.swiper-slide-next-next {
+          opacity: 1;
+          transform: scale(0.9);
           z-index: 1;
         }
         .swiper-slide-custom .slide-text {
@@ -69,6 +103,11 @@ const Tutorial: React.FC = () => {
         .swiper-slide-custom.swiper-slide-active .slide-text {
           opacity: 1;
         }
+          @media (max-width: 768px) {
+            .swiper-slide-custom.swiper-slide-prev-prev,
+            .swiper-slide-custom.swiper-slide-next-next {
+              opacity: 0;
+            }
       `}</style>
     </div>
   );
@@ -93,7 +132,7 @@ const slidesData = [
   {
     image: '/images/tutorial/split expense.png',
     title: 'Add Expenses',
-    description: 'Select a group and click "Add Expenses" and enter expense information like amount and description and share the costs equally or change the distribution according to the payments',
+    description: 'Select a group and click "Add Expenses" and enter expense information like amount and description and share the costs equally or change the distribution according to the payments.',
   },
   {
     image: '/images/tutorial/settle.png',
