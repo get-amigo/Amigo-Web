@@ -1,7 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const navigation = {
   main: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Privacy", href: "/privacy" },
     { name: "Terms", href: "/terms" },
   ],
@@ -53,8 +56,23 @@ const navigation = {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
+    
     <footer className="bg-[#0F0E14] text-sm">
-      <div className="mx-auto max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8 bottom-0">
+      <div className="flex justify-center pt-8 ">
+          <Link href="#" className="m-1.5 p-1.5 pl-8 flex items-center">
+            <span className="sr-only">Get Amigo</span>
+            <Image
+              className="h-12 w-auto"
+              width={12}
+              height={12}
+              src="/amigo-logo.svg"
+              alt="amigo logo"
+            />
+            <span className="text-white font-bold ml-2 text-xl font-lalezar">Amigo </span>
+          </Link>
+        </div>
+
+      <div className="mx-auto max-w-7xl overflow-hidden px-4 py-8 sm:px-6 lg:px-8 bottom-0">
         <nav
           className="mb-6 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12"
           aria-label="Footer"
@@ -71,7 +89,7 @@ export default function Footer() {
           ))}
         </nav>
         <div className="contact-info text-white text-center leading-6 text-grey-200 "> 
-          <p >Contact us: +91 86046 16679</p> 
+          {/* <p >Contact us: +91 86046 16679</p>  */}
           <p >Email: dev@getamigo.today</p> 
         </div>
         <div className="mt-8 flex justify-center gap-8">

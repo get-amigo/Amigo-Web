@@ -23,19 +23,19 @@ const sectionData = [
     title: "Chat integration",
     description: "Keep in touch with your friends with Amigo's built-in chat. Discuss expenses, remind team members about expected payments and plan future activities in the program. Combining chat and financial management streamlines communication, which improves overall group financial management.",
     imgSrc: "/images/Frame 34008.png",
-    imgWidth: 384,
-    imgHeight: 750,
+    imgWidth: 300,
+    imgHeight: 680,
     textAlign: "left",
   },
 ];
 
 const Usp: React.FC = () => {
   return (
-    <div className="text-white p-8 font-[Readex Pro]" style={{ background: 'linear-gradient(212.43deg, #0F0E14 1.62%, #0F0E14 34.14%, #272239 65.56%, #563888 97.64%)' }}>
+    <div className="text-white p-8 font-[Readex Pro] md:px-32  " style={{ background: 'linear-gradient(212.43deg, #0F0E14 1.62%, #0F0E14 34.14%, #272239 65.56%, #563888 97.64%)' }}>
       {sectionData.map(({ title, description, imgSrcs, imgSrc, imgWidth, imgHeight, textAlign, isFastUPI }, index) => (
-        <section key={index} className={`section ${textAlign === 'right' ? 'section-reverse' : ''} ${isFastUPI ? 'fast-upi' : ''}`}>
-          <div className="content">
-            <h2 className="font-bold text-2xl mb-4">{title}</h2>
+        <section key={index} className={`section ${textAlign === 'right' ? 'section-reverse' : ''} ${isFastUPI ? 'fast-upi' : ''}`} style={{ paddingTop: '2.5rem', paddingBottom: '2.5rem'}}>
+          <div className="content z">
+            <h2 className="font-bold text-4xl mb-4">{title}</h2>
             <p className="text-lg leading-8 text-zinc-200">{description}</p>
           </div>
           <div className="images">
@@ -151,14 +151,13 @@ const Usp: React.FC = () => {
           }
 
           .images > *:not(:last-child) {
-            padding-top: 250px;
-            padding-bottom: 80px;
+            padding-top: 180px;
+            padding-bottom: 70px;
           }
 
           .images > *:last-child {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            transform: scale(0.8);
+            padding-top: 40px;
+            padding-bottom: 40px;
           }
         }
       `}</style>

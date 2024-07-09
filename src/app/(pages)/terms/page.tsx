@@ -2,14 +2,15 @@ import React from 'react';
 import Nav from '../../../components/landing/nav';
 import Footer from '../../../components/landing/footer';
 import Image from 'next/image';
+import Download from '@/components/landing/download';
 
 type Props = {};
 
 const terms = (props: Props) => {
   return (
-    <div className="flex flex-col justify-between items-center bg-gray-950">
+    <div className="flex flex-col justify-between items-center bg-[#0F0E14]">
       <Nav />
-      <section className="terms text-white bg-gray-950 relative isolate flex flex-col justify-center py-32 px-4">
+      <section className="terms text-white bg-[#0F0E14] relative isolate flex flex-col justify-center py-32 px-4">
         <div className='max-w-[90%] text-gray-500 text-sm pl-12 pr-6'>
           <h2 className="text-2xl font-bold text-center text-gray-100 mb-10">
             Terms and Conditions for Amigo
@@ -58,6 +59,7 @@ const terms = (props: Props) => {
           </p>
         </div>
       </section>
+      <Download />
       <Footer />
     </div>
   );

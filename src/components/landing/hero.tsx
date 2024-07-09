@@ -66,13 +66,13 @@ const Hero = () => {
       <div className="mx-auto max-w-7xl px-6 pt-10 md:py-10 flex flex-col md:flex-row justify-between gap-10 lg:gap-0">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto self-center space-y-10 ">
           <div>
-            <h1 className="text-center md:text-left text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl lg:text-6xl">
-              A better way to split your money
+            <h1 className="text-center md:text-left text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl lg:text-5xl lg:leading-tight">
+              A better way to split your expenses
             </h1>
             <p className="mt-6 text-center md:text-left text-lg leading-8 text-zinc-200">
               We help you manage your expenses and split them.
             </p>
-            <div className="flex justify-center md:justify-left gap-4 mt-4 pt-10 lg:flex-1 items-left">
+            <div className="flex justify-center md:justify-start gap-4 mt-4 pt-10 lg:flex-1 items-left">
               <AppStoreLink link="https://apps.apple.com/in/app/amigo/id6483936159" />
               <PlayStoreLink link="https://play.google.com/store/apps/details?id=app.amigo.app&hl=en-US" />
             </div>
@@ -92,7 +92,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="px-8 w-full min-w-[14.875em] max-h-[570px] flex justify-center items-center" style={{ marginBottom: 0 }}>
-          <div style={{ transform: imageSrc === "/images/hero-phone.png" ? 'scale(1)' : 'scale(1.5)', transformOrigin: 'center', marginBottom: 0 }}>
+          <div style={{ transform: imageSrc === "/images/hero-phone.png" ? 'scale(1)' : 'scale(1.8)', transformOrigin: 'center', marginBottom: 0 }}>
             <Image
               src={imageSrc}
               alt="App screenshot"

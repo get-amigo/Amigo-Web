@@ -2,13 +2,14 @@ import React from 'react';
 import Nav from '../../../components/landing/nav';
 import Footer from '../../../components/landing/footer';
 import Image from 'next/image';
+import Download from '@/components/landing/download';
 type Props = {};
 
 const privacy = (props: Props) => {
     return (
-        <div className="flex flex-col min-h-screen justify-between bg-gray-950">
+        <div className="flex flex-col min-h-screen justify-between bg-[#0F0E14]">
             <Nav />
-            <section className="privacy-policy text-white bg-gray-950 relative isolate flex flex-col justify-center py-8 px-4 md:py-32 md:px-20 pt-32 md:pt-32">
+            <section className="privacy-policy text-white bg-[#0F0E14] relative isolate flex flex-col justify-center py-8 px-4 md:py-32 md:px-20 pt-32 md:pt-32">
                 <div className='w-full max-w-4xl mx-auto text-gray-500 text-sm'>
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">
                         Privacy Policy for Amigo
@@ -53,7 +54,7 @@ const privacy = (props: Props) => {
                     </p>
                 </div>
             </section>
-
+            <Download />
             <Footer />
         </div>
     );

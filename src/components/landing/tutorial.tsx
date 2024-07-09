@@ -40,9 +40,9 @@ const Tutorial: React.FC = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   return (
-    <div className="bg-[#0F0E14] text-white md:px-20 py-40 font-[Readex Pro]">
-      <h2 className="font-bold text-4xl mb-12 text-center">How It Works</h2>
-      <div className="flex justify-center pt-10">
+    <div className="bg-[#0F0E14] text-white md:px-20 py-8 font-[Readex Pro]">
+      <h2 className="font-bold text-4xl text-center">How It Works</h2>
+      <div className="flex justify-center">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay ]}
@@ -58,7 +58,7 @@ const Tutorial: React.FC = () => {
           {slidesData.map((slide, index) => (
             <SwiperSlide className="swiper-slide-custom" key={index}>
               <div className="flex flex-col items-center text-center">
-                <Image src={slide.image} width={320} height={364} alt={`Step ${index + 1}`} />
+                <Image src={slide.image} width={256} height={291} alt={`Step ${index + 1}`} />
                 <p className="slide-text text-3xl mt-3">Step {index + 1}</p>
                 <p className="slide-text mt-2">{slide.title}</p>
                 <br />
@@ -75,8 +75,7 @@ const Tutorial: React.FC = () => {
         .swiper-slide-custom {
           position: relative;
           opacity: 0;
-          transition: opacity 0.3s, transform 0.3s;
-          transform: scale(0.9);
+          transition: opacity 0.1s, transform 0.3s;
           z-index: 0;
         }
         .swiper-slide-custom.swiper-slide-active {
