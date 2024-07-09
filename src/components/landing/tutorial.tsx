@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // Pagination , Navigation
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,12 +9,13 @@ import Image from 'next/image';
 
 const Tutorial: React.FC = () => {
   const swiperRef = useRef(null);
+  const sectionRef = useRef(null);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   const updateCustomSlideClasses = (swiper) => {
     const slides = swiper.slides;
     if (!slides) return;
 
-    // Remove all custom classes
     slides.forEach(slide => {
       slide.classList.remove('swiper-slide-prev-prev', 'swiper-slide-next-next');
     });
@@ -22,7 +23,6 @@ const Tutorial: React.FC = () => {
     const activeIndex = swiper.activeIndex;
     const totalSlides = slides.length;
 
-    // Calculate and add classes for second previous and next slides
     const prevPrevIndex = (activeIndex - 2 + totalSlides) % totalSlides;
     const nextNextIndex = (activeIndex + 2) % totalSlides;
 
@@ -35,29 +35,56 @@ const Tutorial: React.FC = () => {
     if (swiperInstance) {
       swiperInstance.on('slideChange', () => updateCustomSlideClasses(swiperInstance));
     }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            swiperInstance.params.autoplay.disableOnInteraction = false;
+            swiperInstance.autoplay.start();
+          } else {
+            swiperInstance.autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-
   return (
-    <div className="bg-[#0F0E14] text-white md:px-20 py-8 font-[Readex Pro]">
+    <div className="bg-[#0F0E14] text-white md:px-20 py-8 font-[Readex Pro] h-screen" ref={sectionRef}>
       <h2 className="font-bold text-4xl text-center">How It Works</h2>
       <div className="flex justify-center">
         <Swiper
           ref={swiperRef}
-          modules={[Autoplay ]}
-          spaceBetween={-200}
+          modules={[Autoplay, Pagination, Navigation]}
+          spaceBetween={-240}
           slidesPerView={isMobile ? 3 : 5}
           centeredSlides={true}
           loop={true}
-          allowTouchMove={false}
-          autoplay={{ delay: 3000 }}
-          className="custom-swiper w-5/6 md:w-1/2"
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{ clickable: true, el: '.swiper-pagination', bulletClass: 'swiper-pagination-bullet', bulletActiveClass: 'swiper-pagination-bullet-active' }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          allowTouchMove={isMobile}
+          className="custom-swiper w-5/6 md:w-2/3"
           onSlideChange={(swiper) => updateCustomSlideClasses(swiper)}
         >
           {slidesData.map((slide, index) => (
             <SwiperSlide className="swiper-slide-custom" key={index}>
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center pb-8">
                 <Image src={slide.image} width={256} height={291} alt={`Step ${index + 1}`} />
                 <p className="slide-text text-3xl mt-3">Step {index + 1}</p>
                 <p className="slide-text mt-2">{slide.title}</p>
@@ -66,6 +93,13 @@ const Tutorial: React.FC = () => {
               </div>
             </SwiperSlide>
           ))}
+          {!isMobile && (
+            <>
+              <div className="swiper-button-prev"></div>
+              <div className="swiper-button-next"></div>
+            </>
+          )}
+          <div className="swiper-pagination"></div>
         </Swiper>
       </div>
       <style jsx global>{`
@@ -102,11 +136,45 @@ const Tutorial: React.FC = () => {
         .swiper-slide-custom.swiper-slide-active .slide-text {
           opacity: 1;
         }
-          @media (max-width: 768px) {
-            .swiper-slide-custom.swiper-slide-prev-prev,
-            .swiper-slide-custom.swiper-slide-next-next {
-              opacity: 0;
-            }
+        .swiper-pagination-bullet {
+          background-color: #272239;
+          opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #FFFFFF;
+        }
+        .swiper-button-prev, .swiper-button-next {
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 30px;
+          height: 30px;
+          z-index: 10;
+          background-image: none;
+          cursor: pointer;
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+          content: none;
+        }
+        .swiper-button-prev {
+          background-image: url('/images/arrow-left.png');
+          transform : scale(1.5) translateY(-200%);
+        
+        }
+        .swiper-button-next {
+          background-image: url('/images/arrow-right.png');
+          transform : scale(1.5) translateY(-200%);
+
+        }
+
+        @media (max-width: 768px) {
+          .swiper-slide-custom.swiper-slide-prev-prev,
+          .swiper-slide-custom.swiper-slide-next-next {
+            opacity: 0;
+          }
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
+        }
       `}</style>
     </div>
   );

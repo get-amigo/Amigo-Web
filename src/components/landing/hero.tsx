@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative isolate flex justify-center md:py-32 pt-32 ${isPhone ? 'gradient-bg' : ''}`}
+      className={`relative isolate flex justify-center md:py-32 pt-32 ${isPhone ? 'gradient-bg' : ''}h-screen`}
       style={isPhone ? {
         background: 'linear-gradient(212.43deg, #0F0E14 1.62%, #0F0E14 34.14%, #272239 65.56%, #563888 97.64%)'
       } : {

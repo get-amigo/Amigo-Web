@@ -90,7 +90,7 @@ export default function Footer() {
         </nav>
         <div className="contact-info text-white text-center leading-6 text-grey-200 "> 
           {/* <p >Contact us: +91 86046 16679</p>  */}
-          <p >Email: dev@getamigo.today</p> 
+          <p>Email: <a href="mailto:dev@getamigo.today">dev@getamigo.today</a></p>        
         </div>
         <div className="mt-8 flex justify-center gap-8">
           {navigation.social.map((item) => (
