@@ -12,10 +12,10 @@ export function PlayStoreLink({
       <Image
        width={100}
        height={100}
-        src="/images/playstore-badge.png"
+        src="/images/Play Store.png"
         alt="Download on the Play Store"
-        className="block w-40"
-      />
+        className="block w-40 h-auto"
+      /> 
     </Link>
   );
 }
