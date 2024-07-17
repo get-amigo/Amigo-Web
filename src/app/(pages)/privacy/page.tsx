@@ -20,27 +20,22 @@ const privacy = (props: Props) => {
                         <span className='text-xl md:text-2xl mr-5'>
                             Welcome to Amigo
                         </span>
-                        ("Amigo", "we", "us", or "our"). Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this privacy policy carefully.
+                        (&quot;Amigo&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application. Please read this privacy policy carefully.
                     </p>
-                    <br />
                     <p className="mb-4 text-gray-300">
                         IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.
                     </p>
-                    <br />
                     <p className="mb-4 text-gray-300">
-                        We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Effective Date" of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
+                        We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the &quot;Effective Date&quot; of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.
                     </p>
-
                     <p className="mb-4 text-gray-300">
                         You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted.
                     </p>
-
                     <p className="mb-4 text-gray-300">
                         This Privacy Policy does not apply to the third-party online/mobile store from which you install the Application or make payments, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party.
                     </p>
-
                     <p className="mb-4 text-gray-300">
-                        This privacy policy was created using Termly's Privacy Policy Generator.
+                        This privacy policy was created using Termly&apos;s Privacy Policy Generator.
                     </p>
                     <br />
                     <h3 className="text-xl text-gray-100 font-bold mb-2">Collection of Personal Information</h3>
