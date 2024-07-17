@@ -44,26 +44,26 @@ const Usp: React.FC = () => {
                 {index === 0 ? (
                   <>
                     <div className="image-container bounce-reverse" style={{ zIndex: 2, marginTop: -125 }}>
-                      <Image src={imgSrcs[1]} width={imgWidth} height={imgHeight} />
+                      <Image src={imgSrcs[1]} width={imgWidth} height={imgHeight} alt='' />
                     </div>
                     <div className="image-container bounce" style={{ zIndex: 1 }}>
-                      <Image src={imgSrcs[0]} width={imgWidth} height={imgHeight} />
+                      <Image src={imgSrcs[0]} width={imgWidth} height={imgHeight} alt='' />
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="image-container bounce" style={{ zIndex: 2, marginTop: -115 }}>
-                      <Image src={imgSrcs[0]} width={imgWidth} height={imgHeight} />
+                      <Image src={imgSrcs[0]} width={imgWidth} height={imgHeight} alt='' />
                     </div>
                     <div className="image-container bounce-reverse" style={{ zIndex: 1 }}>
-                      <Image src={imgSrcs[1]} width={imgWidth} height={imgHeight} />
+                      <Image src={imgSrcs[1]} width={imgWidth} height={imgHeight} alt='' />
                     </div>
                   </>
                 )}
               </>
             ) : (
               <div className="image-container bounce">
-                <Image src={imgSrc} width={imgWidth} height={imgHeight} />
+                <Image src={imgSrc} width={imgWidth} height={imgHeight} alt='' />
               </div>
             )}
           </div>

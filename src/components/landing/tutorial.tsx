@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,7 +12,7 @@ const Tutorial: React.FC = () => {
   const sectionRef = useRef(null);
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
-  const updateCustomSlideClasses = (swiper) => {
+  const updateCustomSlideClasses = (swiper: SwiperClass) => {
     const slides = swiper.slides;
     if (!slides) return;
 
@@ -31,7 +31,7 @@ const Tutorial: React.FC = () => {
   };
 
   useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper;
+    const swiperInstance = (swiperRef.current as any)?.swiper;
     if (swiperInstance) {
       swiperInstance.on('slideChange', () => updateCustomSlideClasses(swiperInstance));
     }
@@ -62,13 +62,13 @@ const Tutorial: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#0F0E14] text-white md:px-20 py-8 font-[Readex Pro] h-screen" ref={sectionRef}>
+    <div className="bg-[#0F0E14] text-white md:px-20 py-8 font-[Readex Pro] " ref={sectionRef}>
       <h2 className="font-bold text-4xl text-center">How It Works</h2>
       <div className="flex justify-center">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={-240}
+          spaceBetween={-200}
           slidesPerView={isMobile ? 3 : 5}
           centeredSlides={true}
           loop={true}
@@ -79,12 +79,12 @@ const Tutorial: React.FC = () => {
             prevEl: '.swiper-button-prev',
           }}
           allowTouchMove={isMobile}
-          className="custom-swiper w-5/6 md:w-2/3"
+          className="custom-swiper w-5/6 md:w-1/2"
           onSlideChange={(swiper) => updateCustomSlideClasses(swiper)}
         >
           {slidesData.map((slide, index) => (
             <SwiperSlide className="swiper-slide-custom" key={index}>
-              <div className="flex flex-col items-center text-center pb-8">
+              <div className="flex flex-col items-center text-center pb-5">
                 <Image src={slide.image} width={256} height={291} alt={`Step ${index + 1}`} />
                 <p className="slide-text text-3xl mt-3">Step {index + 1}</p>
                 <p className="slide-text mt-2">{slide.title}</p>
@@ -175,6 +175,7 @@ const Tutorial: React.FC = () => {
             display: none;
           }
         }
+
       `}</style>
     </div>
   );

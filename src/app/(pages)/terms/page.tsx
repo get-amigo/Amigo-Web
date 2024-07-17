@@ -8,7 +8,7 @@ type Props = {};
 
 const terms = (props: Props) => {
   return (
-    <div className="flex flex-col justify-between items-center bg-[#0F0E14]">
+    <div className="flex flex-col justify-between min-h-screen bg-[#0F0E14]">
       <Nav />
       <section className="terms text-white bg-[#0F0E14] relative isolate flex flex-col justify-center py-32 px-4">
         <div className='max-w-[90%] text-gray-500 text-sm pl-12 pr-6'>
