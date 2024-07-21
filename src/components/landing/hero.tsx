@@ -90,16 +90,16 @@ const Hero = () => {
               </div>
             </div> */}
           </div>
-        </div>
-        <div className="px-8 w-full min-w-[14.875em] max-h-[570px] flex justify-center items-center" style={{ marginBottom: 0 }}>
-          <div style={{ transform: imageSrc === "/images/hero-phone.png" ? 'scale(1)' : 'scale(1.8)', transformOrigin: 'center', marginBottom: 0 }}>
+          </div>
+          <div className="px-8 w-full min-w-[14.875em] max-h-[570px] flex justify-center items-center overflow-x-clip" style={{ marginBottom: 0 }}>
+           <div style={{ transform: imageSrc === "/images/hero-phone.png" ? 'scale(1)' : 'scale(1.8)', marginBottom: 0 }}>
             <Image
               src={imageSrc}
               alt="App screenshot"
               width={800}
               height={800}
               className="mx-auto w-full h-auto drop-shadow-xl"
-              style={{ marginBottom: 0}}
+              style={{ marginBottom: 0, maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
             />
           </div>
         </div>
