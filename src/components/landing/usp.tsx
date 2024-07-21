@@ -7,15 +7,15 @@ const sectionData = [
     description: "Amigo makes it easy to share bills with friends. Create groups, add bills, and stay on top of the math. Whether it's one-off costs or ongoing expenses, Amigo makes sure everyone pays their fair share. You can also manage recurring payments to keep a running balance, making it easy to manage your running costs.",
     imgSrcs: ["/images/ExpenseSharing2.png", "/images/ExpenseSharing1.png"],
     imgWidth: 247,
-    imgHeight: 720,
+    imgHeight: 680,
     textAlign: "left",
   },
   {
     title: "Fast UPI Payments",
     description: "With Amigo's UPI integration, you can send and receive money quickly and securely. Pay your friends directly from the app without multiple transactions. Our platform supports instant transfers, ensuring expenses are paid locally, offering convenience and peace of mind.",
     imgSrcs: ["/images/FastUPI1.png", "/images/FastUPI2.png"],
-    imgWidth: 351,
-    imgHeight: 726,
+    imgWidth: 300,
+    imgHeight: 680,
     textAlign: "right",
     isFastUPI: true,
   },
@@ -111,10 +111,10 @@ const Usp: React.FC = () => {
           }
         }
         .bounce {
-          animation: bounce 2s infinite;
+          animation: bounce 3s infinite;
         }
         .bounce-reverse {
-          animation: bounce-reverse 2s infinite;
+          animation: bounce-reverse 3s infinite;
         }
         @media (min-width: 768px) {
           .section {

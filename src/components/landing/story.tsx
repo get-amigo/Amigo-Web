@@ -50,7 +50,7 @@ const Story: React.FC = () => {
       <section className="about-us-section mb-8 pt-20">
         <h1 className="text-4xl font-bold mb-6">About Us</h1>
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="md:w-2/3">
+          <div className="md:w-1/2">
             <p className="text-lg leading-8 text-zinc-200 text-center md:text-left paragraph-spacing">
               Our goal at Amigo is to revolutionize the way friends manage their finances together. Our mission is to provide a seamless and user-friendly platform for cost sharing, instant UPI payment and easy communication. Amigo is your one-stop destination for all your finance management expense sharing.
             </p>
@@ -64,20 +64,34 @@ const Story: React.FC = () => {
               We were on a trip to Coorg and my roommate had to keep all the bills and had to write everything in order to split the bills and in order to tackle this problem we are introducing Amigo, your one-stop destination for all your bills.
             </p>
           </div>
-          <div className="flex md:w-1/2 justify-end mt-9 md:mt-0 gap-3 image-container">
+          <div className="flex md:w-1/3 justify-end mt-9 md:mt-0 gap-3 image-container">
+            <Image 
+              src="/images/Story01.png" 
+              width={360} 
+              height={314} 
+              alt="Story Image 1"
+              className="mb-4 md:mb-40 hidden md:block"
+            />
+            <Image 
+              src="/images/Story02.png" 
+              width={360} 
+              height={314} 
+              alt="Story Image 2"
+              className="mt-6 md:mt-40 hidden md:block"
+            />
             <Image 
               src="/images/story1.png" 
-              width={320} 
-              height={364} 
+              width={360} 
+              height={314} 
               alt="Story Image 1"
-              className="mb-4 md:mb-40"
+              className="mb-4 md:hidden"
             />
             <Image 
               src="/images/story2.png" 
-              width={320} 
-              height={364} 
+              width={360} 
+              height={314} 
               alt="Story Image 2"
-              className="mt-6 md:mt-40"
+              className="mt-6 md:hidden"
             />
           </div>
         </div>

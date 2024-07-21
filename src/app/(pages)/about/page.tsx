@@ -44,22 +44,38 @@ const about = (props: Props) => {
                 className="w-full md:w-1/2 absolute top-20 right-40 transform translate-x-1/2 -translate-y-1/2"
               />
             </div> */}
-                      <div className="flex md:w-1/2 justify-end mt-9 md:mt-0 gap-3 image-container">
-            <Image 
-              src="/images/story1.png" 
-              width={320} 
-              height={364} 
-              alt="Story Image 1"
-              className="mb-4 md:mb-40"
-            />
-            <Image 
-              src="/images/story2.png" 
-              width={320} 
-              height={364} 
-              alt="Story Image 2"
-              className="mt-6 md:mt-40"
-            />
-          </div>
+            <div className="flex md:w-1/2 justify-end mt-9 md:mt-0 gap-3 image-container">
+              <Image 
+                src="/images/Story01.png" 
+                width={320} 
+                height={364} 
+                alt="Story Image 1"
+                className="mb-4 md:mb-40 hidden md:block"
+              />
+              <Image 
+                src="/images/Story02.png" 
+                width={320} 
+                height={364} 
+                alt="Story Image 2"
+                className="mt-6 md:mt-40 hidden md:block"
+              />
+
+              <Image 
+                src="/images/story1.png" 
+                width={320} 
+                height={364} 
+                alt="Story Image 1"
+                className="mb-4 md:hidden"
+              />
+              <Image 
+                src="/images/story2.png" 
+                width={320} 
+                height={364} 
+                alt="Story Image 2"
+                className="mt-6 md:hidden"
+              />
+
+            </div>
           </div>
         </div>
       </div>
