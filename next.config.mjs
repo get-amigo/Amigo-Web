@@ -4,8 +4,11 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: "",
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
+  env: {
+    API_URL: "http://localhost:4000",
+  },
 };
 
 export default nextConfig;
