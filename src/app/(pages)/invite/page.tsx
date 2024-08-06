@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import jwt from "jsonwebtoken";
 
-function extractGroupIdFromUrl() {
+function extractGroupIdFromUrl(): string | null {
   const url = window.location.href;
   const urlParams = new URLSearchParams(url.split("?")[1]);
   const groupId = urlParams.get("groupId");
@@ -18,7 +19,7 @@ function openStore() {
   }
 }
 
-function extractRedirectPath() {
+function extractRedirectPath(): string {
   const groupId = window.location.hash.substring(2); // Removes #/
   return groupId;
 }
@@ -29,22 +30,18 @@ function joinGroup() {
 }
 
 const GroupData = () => {
-  const [groupName, setGroupName] = useState("...");
-  const [groupLength, setGroupLength] = useState();
+  const [groupName, setGroupName] = useState<string | null>("...");
+  const [groupLength, setGroupLength] = useState<number | null>();
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(
-        `${process.env.API_URL}/group/${extractGroupIdFromUrl()}/info`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+    const groupId = extractGroupIdFromUrl();
+    if (groupId) {
+      const data = jwt.decode(groupId);
+      if (data && typeof data === "object") {
+        setGroupName(data.name as string);
+        setGroupLength(data.memberCount as number);
       }
-      const data = await response.json();
-      setGroupName(data.name);
-      setGroupLength(data.memberCount);
     }
-    fetchData();
   }, []);
 
   const icons = [];
