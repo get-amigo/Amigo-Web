@@ -31,7 +31,7 @@ function joinGroup() {
 
 const GroupData = () => {
   const [groupName, setGroupName] = useState<string | null>("...");
-  const [groupMemeberCount, setGroupMemeberCount] = useState<number | null>();
+  const [groupMemberCount, setGroupMemberCount] = useState<number | null>();
 
   useEffect(() => {
     const groupId = extractGroupIdFromUrl();
@@ -39,15 +39,15 @@ const GroupData = () => {
       const data = jwt.decode(groupId);
       if (data && typeof data === "object") {
         setGroupName(data.name as string);
-        setGroupMemeberCount(data.memberCount as number);
+        setGroupMemberCount(data.memberCount as number);
       }
     }
   }, []);
 
   const icons = [];
 
-  if (groupMemeberCount) {
-    for (let i = 0; i < groupMemeberCount && i < 3; i++) {
+  if (groupMemberCount) {
+    for (let i = 0; i < groupMemberCount && i < 3; i++) {
       icons.push(<UserIcon key={i} />);
     }
   }
@@ -64,17 +64,17 @@ const GroupData = () => {
         {icons}
 
         {/*extra count */}
-        {groupMemeberCount && groupMemeberCount > 3 && (
+        {groupMemberCount && groupMemberCount > 3 && (
           <div className="w-9 h-9 rounded-full overflow-hidden border-2 -ml-4 bg-white flex">
             <span className="text-[#8740FD] font-medium text-sm m-auto">
-              +{groupMemeberCount - 3}
+              +{groupMemberCount - 3}
             </span>
           </div>
         )}
 
-        {groupMemeberCount ? (
+        {groupMemberCount ? (
           <div className="font-light text-sm ml-3 mt-auto">
-            {groupMemeberCount} members
+            {groupMemberCount} members
           </div>
         ) : (
           <div className="font-semibold text-xl -ml-4 mt-auto">...</div>
