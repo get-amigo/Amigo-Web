@@ -4,8 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: "",
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
